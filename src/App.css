@@ -1,3 +1,42 @@
 .App {
   text-align: center;
 }
+
+.items {
+  width: 80%;
+  display: grid;
+  grid-template-rows: repeat(5,1fr);
+  grid-template-columns: repeat(3,1fr);
+  gap: 1em;
+  margin: auto;
+}
+
+.item {
+  height: 400px;
+  width: 90%;
+  background: whitesmoke;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.item img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width:850px){
+  .items  {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .item img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .items {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
